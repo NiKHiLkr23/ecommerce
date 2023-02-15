@@ -21,7 +21,7 @@
     }
 
     .sidebarItem{
-        @apply flex flex-col items-center justify-center space-y-2 font-semibold font-mono text-sm text-gray-400 hover:text-[#5DA9E9] active:text-[#5DA9E9] 
+        @apply flex flex-col  items-center justify-center space-y-2 font-semibold font-mono text-sm text-gray-400 hover:text-[#5DA9E9] active:text-[#5DA9E9] 
     }
     
     .svgItem{
@@ -32,6 +32,8 @@
         @apply bg-[#5DA9E9] text-white
     }
 
+    
+
 
 }
 
@@ -40,12 +42,16 @@
     background-color: #5DA9E9;
 }
 
-.sidebarItem:active .svgItem{
+.ac-tive .svgItem{
     background-color: #5DA9E9;
 }
 
-.sidebarItem:active .svgItem svg path {
-    fill: #fff
+.ac-tive svg path {
+    fill: #fff;  
+}
+
+.ac-tive p{
+    color: #5DA9E9;
 }
 
 .sidebarItem:hover .svgItem svg path {

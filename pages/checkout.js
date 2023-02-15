@@ -1,6 +1,6 @@
 import Header from "../components/Header";
 import { useSelector } from "react-redux";
-import { selectItems, selectTotal } from "../slices/BasketSlice";
+import { selectItems } from "../slices/BasketSlice";
 import CartItem from "@/components/CartItem";
 
 function Checkout() {

@@ -3,12 +3,10 @@ import { useSelector } from "react-redux";
 import { selectItems } from "../slices/BasketSlice";
 function Header() {
   const items = useSelector(selectItems);
-  console.log("items", items);
 
   const router = useRouter();
   return (
     <header className="w-full sticky top-0 z-50">
-      {/* topNav */}
       <div className="flex items-center p-2 bg-white md:p-5 md:bg-[#FFE475] mt-3 md:mt-0">
         <p
           onClick={() => router.push("/")}
@@ -16,16 +14,11 @@ function Header() {
         >
           E-Commerce
         </p>
-
-        {/* Right */}
         <div className="text-white flex grow justify-end items-center  ">
           <div
             onClick={() => router.push("/checkout")}
             className="relative flex items-center p-2 px-6 justify-center mr-3 rounded-full shadow-lg bg-white"
           >
-            {/* <span className="absolute top-0 right-0 md:right-10 h-4 w-4 bg-yellow-400 text-center rounded-full text-black font-bold">
-              {items.length}
-            </span> */}
             <svg
               width="20"
               height="20"

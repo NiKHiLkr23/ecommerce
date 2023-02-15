@@ -1,12 +1,5 @@
-import { useRouter } from "next/router";
-import { useSelector } from "react-redux";
-import { selectItems } from "../slices/BasketSlice";
 import { Link as Scroll } from "react-scroll";
-import { useState } from "react";
-import Link from "next/link";
 function Navigation() {
-  const items = useSelector(selectItems);
-
   const sidebarItems = [
     { id: 1, title: "Produce", to: "produce" },
     { id: 2, title: "Sweets", to: "sweets" },
@@ -17,12 +10,19 @@ function Navigation() {
     { id: 7, title: "Meat & Seafood", to: "meat" },
   ];
 
-  const router = useRouter();
   return (
     <aside className="sticky top-12 z-50 md:z-30 md:top-24 md:h-screen bg-white p-2 pl-4 mb-5 md:mb-0 ">
       <nav>
         <div className="flex  space-x-4 overflow-x-scroll md:hidden md:overflow-hidden">
-          <div className=" sidebarItem ">
+          <Scroll
+            to="produce"
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={-200}
+            activeClass="ac-tive"
+            className=" sidebarItem "
+          >
             <div className=" svgItem ">
               <svg
                 width="24"
@@ -37,9 +37,18 @@ function Navigation() {
               </svg>
             </div>
             <p>Produce</p>
-          </div>
-          <div className=" sidebarItem ">
-            <div className=" svgItem ">
+          </Scroll>
+
+          <Scroll
+            to="sweets"
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={-200}
+            activeClass="ac-tive"
+            className=" sidebarItem "
+          >
+            <div className="svgItem">
               <svg
                 width="24"
                 height="24"
@@ -54,8 +63,17 @@ function Navigation() {
               </svg>
             </div>
             <p>Sweets</p>
-          </div>
-          <div className=" sidebarItem ">
+          </Scroll>
+
+          <Scroll
+            to="bakery"
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={-200}
+            activeClass="ac-tive"
+            className=" sidebarItem "
+          >
             <div className=" svgItem ">
               <svg
                 width="24"
@@ -71,8 +89,16 @@ function Navigation() {
               </svg>
             </div>
             <p>Bakery</p>
-          </div>
-          <div className=" sidebarItem ">
+          </Scroll>
+          <Scroll
+            to="canned"
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={-200}
+            activeClass="ac-tive"
+            className=" sidebarItem "
+          >
             <div className=" svgItem ">
               <svg
                 width="24"
@@ -88,8 +114,16 @@ function Navigation() {
               </svg>
             </div>
             <p>Canned</p>
-          </div>
-          <div className=" sidebarItem ">
+          </Scroll>
+          <Scroll
+            to="dairy"
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={-200}
+            activeClass="ac-tive"
+            className=" sidebarItem "
+          >
             <div className=" svgItem ">
               <svg
                 width="24"
@@ -105,8 +139,16 @@ function Navigation() {
               </svg>
             </div>
             <p>Diary</p>
-          </div>
-          <div className=" sidebarItem ">
+          </Scroll>
+          <Scroll
+            to="frozen"
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={-200}
+            activeClass="ac-tive"
+            className=" sidebarItem "
+          >
             <div className=" svgItem ">
               <svg
                 width="20"
@@ -133,8 +175,16 @@ function Navigation() {
               </svg>
             </div>
             <p>Frozen</p>
-          </div>
-          <div className=" sidebarItem ">
+          </Scroll>
+          <Scroll
+            to="meat"
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={-200}
+            activeClass="ac-tive"
+            className=" sidebarItem "
+          >
             <div className=" svgItem ">
               <svg
                 width="24"
@@ -150,7 +200,7 @@ function Navigation() {
               </svg>
             </div>
             <p>Meat</p>
-          </div>
+          </Scroll>
         </div>
 
         <div className=" hidden md:flex flex-col space-y-1 md:w-64">

@@ -30,7 +30,6 @@ function Product({ id, title, price, quantity, image }) {
     dispatch(removeFromBasket({ id }));
   };
 
-  console.log("toggle", toggle);
   return (
     <div className="flex flex-col space-y-2 z-30 p-5">
       <div className="relative w-28">
